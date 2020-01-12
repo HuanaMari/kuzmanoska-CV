@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Noticia+Text&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" />
+    <link href="https://fonts.googleapis.com/css?family=Girassol&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>KUZMANOSKA</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-weight: 200;
+            font-family: 'Noto Sans JP', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        i {
+            color: #ffbd39;
+            margin-right: 5px;
+        }
+
+        h1 {
+            text-decoration: underline;
+            text-decoration-color: #ffbd39;
+            margin-bottom: 20px;
+            font-family: 'Girassol', cursive;
+        }
+
+        .header {
+            background-image: url("josh-rose.jpg");
+            background-color: #000;
+            background-position: top center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            position: relative;
+
+        }
+
+        .home-page {
+            width: 60%;
+            height: 250px;
+            margin: 0 0 auto auto;
+        }
+
+        .name {
+            font-style: italic;
+            font-weight: 800;
+            color: #ffbd39;
+            font-size: 60px;
+            bottom: -22px;
+            text-shadow: 2px 2px 2px #111;
+            font-family: 'Girassol', cursive;
+            position: absolute;
+            bottom: -10px;
+            right: 20px;
+        }
+
+        .menu {
+            display: flex;
+            align-items: flex-end;
+            width: 100%;
+            height: 50px;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 1) 50%, rgb(82, 81, 81) 100%);
+        }
+
+        .list {
+            width: 50%;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+            text-transform: uppercase;
+        }
+
+        .list a {
+            color: #ffbd39;
+            font-size: 20px;
+            font-family: 'Noticia Text', serif;
+            padding: 0;
+        }
+
+        .menu #bars {
+            display: none;
+        }
+
+        .main {
+            width: 100%;
+        }
+
+        .wrapper {
+            width: 70%;
+            margin: 0 auto;
+            margin-top: 30px;
+            padding: 30px 0;
+            font-size: 16px;
+            text-align: left;
+        }
+
+
+
+        #about {
+            display: flex;
+        }
+
+        #about p {
+            padding: 0 60px;
+        }
+
+        .mk {
+            margin: 0 40px;
+            background: url("8.png");
+            background-position: left center;
+            background-size: cover;
+            width: 500px;
+            height: 200px;
+            border: 2px solid #ffbd39;
+            border-radius: 50%;
+            box-shadow: -5px 5px;
+        }
+
+        #education,
+        #contact {
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.9);
+            color: rgb(243, 243, 243);
+            position: relative;
+            margin-top: 60px;
+            padding-top: 20px;
+        }
+
+        .transform {
+            background-color: #fff;
+            height: 6px;
+        }
+
+        #experience {
+            background: url("edit.jpg");
+            background-position: left center;
+            background-size: cover;
+            color: rgb(243, 243, 243);
+
+        }
+
+        .skew-right {
+            content: "";
+            position: absolute;
+            top: -50px;
+            left: 0px;
+            height: 50px;
+            width: 100%;
+            background: #fff;
+            transform-origin: top right;
+            transform: skewY(-2deg);
+            z-index: 1;
+        }
+
+        .skew-left {
+            content: "";
+            position: absolute;
+            top: -50px;
+            right: 0px;
+            height: 50px;
+            width: 100%;
+            background: #fff;
+            transform-origin: top left;
+            transform: skewY(2deg);
+            z-index: 1;
+        }
+
+        .section-list h3 {
+            margin-top: 25px;
+            font-size: 16px;
+            border-bottom: solid 2px #ffbd39;
+        }
+
+        #project a {
+            cursor: pointer;
+            color: black;
+            background-color: #ffbd39;
+            padding: 10px 20px;
+            text-align: center;
+            border-radius: 10px;
+            font-family: cursive;
+        }
+
+        #project p {
+            margin: 20px auto;
+            margin-bottom: 30px;
+        }
+
+        #contact a {
+            color: rgb(243, 243, 243);
+        }
+
+        .back {
+            position: fixed;
+            bottom: 5px;
+            right: 5px;
+            width: 40px;
+            height: 40px;
+            background-color: rgba(0, 0, 0, 0.9);
+            text-align: center;
+            font-size: 30px;
+            padding-left: 6px;
+            z-index: 5;
+        }
+
+        .skills-wrapper:first-child {
+            height: 6px;
+        }
+
+        .htmlCss {
+            width: 25%;
+        }
+
+        .javascript {
+            width: 35%;
+        }
+
+        .node {
+            width: 45%
+        }
+
+        .mySql {
+            width: 55%;
+        }
+
+        .react {
+            width: 2%;
+        }
+
+
+        .skills-bars {
+            transition: all 7s linear;
+            width: 1%;
+            height: 100%;
+            background-color: #ffbd39;
+        }
+
+        .is-visible.skills-bars {
+            width: 100%;
+        }
+
+
+
+
+
+
+        @media only screen and (max-width: 768px) {
+            .header {
+                background-image: url(" ");
+                background-color: transparent;
+            }
+
+            .home-page {
+                background-image: url("666.jpg");
+                background-position: left center;
+                background-size: cover;
+                width: 100%;
+                height: 250px;
+                border-radius: 100%/0 0px 0px 430px;
+                position: relative;
+            }
+
+            .name {
+                font-size: 35px;
+            }
+
+            .wrapper {
+                width: 85%;
+            }
+
+            #about {
+                margin: -30px auto;
+            }
+
+            #skills,
+            #project {
+                margin: -15px auto;
+            }
+
+            .menu {
+                background: transparent;
+            }
+
+            .menu #bars {
+                display: block;
+                position: absolute;
+                left: 10px;
+                top: 20px;
+                cursor: pointer;
+                font-size: 30px;
+                z-index: 1000;
+            }
+
+            .list {
+                width: 100%;
+                display: block;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                z-index: 100;
+                background-color: rgba(32, 32, 32, 0.966);
+                text-align: center;
+                padding-top: 80px;
+                text-transform: uppercase;
+            }
+
+            .list {
+                display: none;
+            }
+
+            .list a {
+                color: #fff;
+                font-size: 16px;
+                padding: 10px 20px;
+                text-align: center;
+            }
+
+            .list li {
+                border-bottom: 2px solid rgba(255, 255, 255, 1);
+                width: 40%;
+                margin: auto;
+                padding-top: 2px;
+            }
+
+            .mk {
+                display: none;
+            }
+
+            #about p {
+                padding: 0;
+            }
+
+
+            li,
+            a,
+            p,
+            span {
+                font-size: 12px;
+            }
+
+            #education,
+            #contact {
+                padding-top: 0px;
+            }
+
+            .back {
+                width: 25px;
+                height: 25px;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.2);
+                font-size: 20px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header" id="home">
+        <div class="home-page flex">
+            <div class="name">Marija Kuzmanoska</div>
+        </div>
+    </div>
+
+    <div class="menu show-on-scroll">
+        <label id="bars"> <i class="fas fa-bars"></i></label>
+        <ul class="list list-view">
+            <li><a href="#about">About me</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#project">Project</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="main">
+
+        <div class="wrapper" id="about">
+            <div>
+                <h1>About me</h1>
+                <p>I'm coming from Probistip, a city too small for my energy. I came in as an accountant and
+                    calculate I
+                    could do a much more. In this resume I will briefly try to show you where and how I began
+                    the
+                    story
+                    of my curiosity, ambition and desire for more...</p>
+            </div>
+            <div class="mk"></div>
+        </div>
+
+
+        <div id="education">
+            <div class="skew-right"></div>
+            <div class="wrapper">
+                <h1>Education</h1>
+                <ul class="section-list">
+                    <h3><i class="fas fa-university"></i>Code Academy</h3>
+                    <li> <i class="far fa-calendar-check"></i> 2019</li>
+                    <li> <i class="fas fa-user-graduate"></i>Junior full stack web developer</li>
+                    <li> <i class="fas fa-map-marker-alt"></i> Skopje</li>
+                </ul>
+                <ul class="section-list">
+                    <h3><i class="fas fa-university"></i>CES Training Center</h3>
+                    <li> <i class="far fa-calendar-check"></i> 2018</li>
+                    <li> <i class="fas fa-user-graduate"></i>Accountant</li>
+                    <li> <i class="fas fa-map-marker-alt"></i> Skopje</li>
+                </ul>
+                <ul class="section-list">
+                    <h3><i class="fas fa-university"></i>University Goce Delcev</h3>
+                    <li> <i class="far fa-calendar-check"></i> 2008</li>
+                    <li> <i class="fas fa-user-graduate"></i>Economist in International Economics</li>
+                    <li> <i class="fas fa-map-marker-alt"></i> Shtip</li>
+                </ul>
+            </div>
+        </div>
+        <div class="wrapper" id="skills">
+            <h1>Skills</h1>
+            <div class="skills-wrapper"> <i class="fab fa-html5"></i> HTML5 & CSS3
+                <div class="transform htmlCss show-on-scroll">
+                    <div class="skills-bars"></div>
+                </div>
+            </div>
+            <div class="skills-wrapper"> <i class="fab fa-js-square"></i> JavaScript <div
+                    class="transform javascript show-on-scroll">
+                    <div class="skills-bars"></div>
+                </div>
+            </div>
+            <div class="skills-wrapper"> <i class="fab fa-node-js"></i> NodeJS <div
+                    class="transform node show-on-scroll">
+                    <div class="skills-bars"></div>
+                </div>
+            </div>
+            <div class="skills-wrapper"> <i class="fas fa-database"></i> MySQL <div
+                    class="transform mySql show-on-scroll">
+                    <div class="skills-bars"></div>
+                </div>
+            </div>
+            <div class="skills-wrapper"> <i class="fab fa-react"></i> React <div class="transform react show-on-scroll">
+                    <div class="skills-bars"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="experience">
+            <div class="wrapper">
+                <h1>Experience</h1>
+                <ul class="section-list">
+                    <h3> <i class="far fa-building"></i> Euro Method DOOEL</h3>
+                    <li> <i class="fas fa-hard-hat"></i>Construction Company</li>
+                    <li> <i class="far fa-calendar-check"></i>2017-</li>
+                    <li> <i class="fas fa-file-invoice-dollar"></i> Accountant</li>
+                </ul>
+                <ul class="section-list">
+                    <h3><i class="far fa-building"> </i>Johnson Controls</h3>
+                    <li> <i class="fas fa-industry"></i>Manufacture</li>
+                    <li> <i class="far fa-calendar-check"></i>2013-2016</li>
+                    <li> <i class="fab fa-odnoklassniki"></i>Machine operator</li>
+                </ul>
+                <ul class="section-list">
+                    <h3> <i class="far fa-building"> </i>Roma Impeks</h3>
+                    <li> <i class="fas fa-pizza-slice"></i>Pizzeria</li>
+                    <li> <i class="far fa-calendar-check"></i>2009-2010</li>
+                    <li> <i class="fas fa-utensils"></i>Waitress</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="wrapper" id="project">
+            <h1>Project</h1>
+            <p>As a junior in this branch this is my first project</p>
+            <a href="https://huanamari.github.io/" target="_blank">MK-Facade</a>
+
+        </div>
+        <div id="contact">
+            <div class="skew-left"></div>
+            <div class="wrapper">
+                <h1>Contact</h1>
+                <div class="phone">
+                    <i class="fas fa-phone"></i>
+                    <a href="tel:074206088">074/206-088</a>
+                </div>
+                <div class="mail">
+                    <i class="fas fa-at"></i>
+                    <a href="mailto:marija.kuzmanoska@gmail.com">marija.kuzmanoska@gmail.com</a>
+                </div>
+                <div class="git">
+                    <i class="fab fa-github"></i>
+                    <a href="https://github.com/HuanaMari" target="_blank">Github</a>
+                </div>
+                <div class="linkedin">
+                    <i class="fab fa-linkedin"></i>
+                    <a href="https://www.linkedin.com/in/marija-kuzmanoska-2b447a42/" target="_blank">Linkedin</a>
+                </div>
+                <div class="createdBy">
+                    <i class="far fa-copyright"></i>
+                    <span>2020 by Marija Kuzmanoska.
+                    </span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="back">
+        <i class="fas fa-angle-up"></i>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+        if ($(".menu #bars").css('display') != 'none') {
+            $(".fa-bars").on('click', () => {
+                if ($('.list').css('display') === 'block') {
+                    $('.list').css('display', 'none')
+                } else {
+                    $('.list').css('display', 'block')
+                }
+            });
+
+            $(".list a").on('click', () => {
+                if ($('.list').css('display') === 'block') {
+                    $('.list').css('display', 'none')
+                } else {
+                    $('.list').css('display', 'block')
+                }
+            })
+        };
+
+        $(".back").on('click', () => {
+            $('html,body').animate({ scrollTop: 0 }, 'slow');
+            return false
+        });
+
+        const callback = function (entries) {
+            entries.forEach(entry => {
+                entry.target.classList.toggle("is-visible");
+            });
+        };
+
+        const observer = new IntersectionObserver(callback);
+
+        const targets = document.querySelectorAll(".skills-bars");
+        targets.forEach(function (target) {
+            observer.observe(target);
+        });
+    </script>
+</body>
+
+</html>
