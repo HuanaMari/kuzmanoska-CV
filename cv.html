@@ -316,7 +316,6 @@
             <div class="name">Marija Kuzmanoska</div>
         </div>
     </div>
-
     <div class="menu show-on-scroll">
         <label id="bars"> <i class="fas fa-bars"></i></label>
         <ul class="list list-view">
@@ -328,23 +327,15 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
-
     <div class="main">
-
         <div class="wrapper" id="about">
             <div>
                 <h1>About me</h1>
-                <p>I'm coming from Probistip, a city too small for my energy. I came in as an accountant and
-                    calculate I
-                    could do a much more. In this resume I will briefly try to show you where and how I began
-                    the
-                    story
-                    of my curiosity, ambition and desire for more...</p>
+                <p>Small town girl with a lot of energy. 
+                    I came in Skopje  as an accountant and found out this is a city of oppurtunities and with a hard work I  can do a much more. In this resume I will  try to show you where and how I began  the  story of my curiosity, ambition and desire for more...</p>
             </div>
             <div class="mk"></div>
         </div>
-
-
         <div id="education">
             <div class="skew-right"></div>
             <div class="wrapper">
@@ -396,7 +387,6 @@
                 </div>
             </div>
         </div>
-
         <div id="experience">
             <div class="wrapper">
                 <h1>Experience</h1>
@@ -420,12 +410,10 @@
                 </ul>
             </div>
         </div>
-
         <div class="wrapper" id="project">
             <h1>Project</h1>
             <p>As a junior in this branch this is my first project</p>
             <a href="https://huanamari.github.io/" target="_blank">MK-Facade</a>
-
         </div>
         <div id="contact">
             <div class="skew-left"></div>
@@ -454,7 +442,6 @@
                 </div>
             </div>
         </div>
-
     </div>
     <div class="back">
         <i class="fas fa-angle-up"></i>
@@ -470,7 +457,6 @@
                     $('.list').css('display', 'block')
                 }
             });
-
             $(".list a").on('click', () => {
                 if ($('.list').css('display') === 'block') {
                     $('.list').css('display', 'none')
@@ -479,18 +465,15 @@
                 }
             })
         };
-
         $(".back").on('click', () => {
             $('html,body').animate({ scrollTop: 0 }, 'slow');
             return false
         });
-
         const callback = function (entries) {
             entries.forEach(entry => {
                 entry.target.classList.toggle("is-visible");
             });
         };
-
         const observer = new IntersectionObserver(callback);
 
         const targets = document.querySelectorAll(".skills-bars");
