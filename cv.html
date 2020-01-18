@@ -467,6 +467,12 @@
             $('html,body').animate({ scrollTop: 0 }, 'slow');
             return false
         });
+        const root = document.querySelector('#skills');
+        const options = {
+            root: root,
+            rootMargin: '0px',
+            threshold: 0
+        };
         const callback = function (entries) {
             entries.forEach(entry => {
                 entry.target.classList.toggle("is-visible");
@@ -478,9 +484,9 @@
         targets.forEach(function (target) {
             observer.observe(target);
         });
-        // $( window ).on( "load", ()=>{
-        //     $('.skills-bars').removeClass('is-visible')
-        // } )
+        $( window ).on( "load", ()=>{
+            $('.skills-bars').removeClass('is-visible')
+        } )
     </script>
 </body>
 </html>
