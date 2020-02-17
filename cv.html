@@ -172,9 +172,11 @@
             border-radius: 10px;
             font-family: cursive;
         }
-        #project p {
-            margin: 20px auto;
-            margin-bottom: 30px;
+        .margin-bottom {
+            margin-bottom:20px;
+        }
+        .margin-bottom:nth-child(1){
+            margin-top: 15px;
         }
         #contact a {
             color: rgb(243, 243, 243);
@@ -218,6 +220,7 @@
         .skills-bars.is-visible {
             width: 100%;
         }
+        
 
         @media only screen and (max-width: 768px) {
             .header {
@@ -411,8 +414,15 @@
         </div>
         <div class="wrapper" id="project">
             <h1>Project</h1>
+            <div>
             <p>As a junior in this branch this is my first project</p>
-            <a href="https://huanamari.github.io/" target="_blank">MK-Facade</a>
+            <p class="margin-bottom">It's a website about a firm that makes decorative house facades</p>
+            <a href="https://huanamari.github.io/" target="_blank">MK-Facade</a></div>
+            <div>
+                <p class="margin-bottom">My second project for back end module is about a simple bank </p>
+                <a href="https://github.com/HuanaMari/project-Bank" target="_blank">MK-Bank</a>
+            </div>
+
         </div>
         <div id="contact">
             <div class="skew-left"></div>
